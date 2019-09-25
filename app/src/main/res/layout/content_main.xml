@@ -8,17 +8,6 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:id="@+id/textintro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/intro_text"
-        android:textSize="@dimen/normal_text_size"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/donut"
         android:layout_width="wrap_content"
@@ -27,6 +16,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
         android:contentDescription="@string/donuts"
+        android:onClick="showDonutOrder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textintro"
         app:srcCompat="@drawable/donut_circle" />
@@ -39,6 +29,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
         android:contentDescription="@string/froyo"
+        android:onClick="showFroyoOrder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donut"
         app:srcCompat="@drawable/froyo_circle" />
@@ -51,9 +42,21 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
         android:contentDescription="@string/ice_cream"
+        android:onClick="showIceCreamOrder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/froyo"
         app:srcCompat="@drawable/icecream_circle" />
+
+    <TextView
+        android:id="@+id/textintro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_text"
+        android:textSize="@dimen/normal_text_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/donut_description"
